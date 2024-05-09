@@ -6,10 +6,7 @@ function dwarfSort(arr) {
     for (var i = 0; i < len - 1; i++) {
       if (arr[i] > arr[i + 1]) {
         // Move the larger number to the back
-        var temp = arr[i];
-        arr[i] = arr[i + 1];
-        arr[i + 1] = temp;
-
+        arr.push(arr.splice(i, 1)[0]);
         sorted = false;
       }
     }
